@@ -1,123 +1,197 @@
 @font-face {
     font-family: 'sego';
     src: url(../../font/SEGOEUI.TTF);
+
 }
 
-img, input {
+@font-face {
+    font-family: 'playfair';
+    src: url(../../font/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'copper';
+    src: url(../../font/CopperplateCC-Bold.ttf);
+}
+
+img,
+input {
     width: 100%;
 }
 
 * {
+
     box-sizing: border-box;
-    font-family: 'sego', sans-serif;
+    font-family: 'playfair';
     margin: 0;
     padding: 0;
 }
-header{
+
+header {
     margin-bottom: 2rem;
 }
+
 body {
     margin: 0;
 }
-h1{
-    
+
+h1 {
+    font-size: 15px;
+    margin-left: 20px;
+    font-family: 'copper';
+    font-weight: 500;
 }
-h2{
-    
+
+h2 {
+    font-size: 15px;
+    margin-left: 20px;
+    padding: 10px 0 10px 0;
+    border-bottom: solid 1px;
+    font-family: 'copper';
+    font-weight: 500;
 }
-h3{
-    
-}
-p{
-    
-}
-button{
+
+h3,
+h4 {
+    font-family: 'copper';
+    font-weight: 300;
+    margin-left: 20px;
+    margin-bottom: 20px;
 
 }
-ul{
+
+p {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    height: 5vh;
 
 }
-li{
+
+button {
+   
+    border-width: 0;
+    width: 100%;
+}
+
+ul {
+    list-style: non;
+}
+
+li {
+    display: inline;
+    margin: 20px;
 
 }
-a{
 
+a {
+    font-family: 'copper';
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
 }
-div{
-    
+
+div {
+    margin: 20px 0 20px 0;
 }
+
 /* header */
 /* ----------------------------------------------------------------------------------------------- */
 nav {
-
-}
-
-#logo {
-
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    top: 0;
+    box-shadow: 0px 3px 10px 2px;
+    position: fixed;
+    background-color: white;
 }
 
 #header-img {
-
-
+    background-image: url(../../img/architect.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    color: white;
 
 }
+#header-img h1 {
+    background-color: rgba(0, 0, 0, .6);
+    padding: 20px;
+}
+
 /* main */
 /* ----------------------------------------------------------------------------------------------- */
 /* projet */
 
+#display,
+#about,
+#coontact,
+#contact input {
 
-#projet {
-  
-}
+    margin-left: 20px;
+    margin-right: 20px;
 
-#display {
-   
 }
 
 span {
+
+    background-color: rgba(0, 0, 0, .7);
+    color: white;
+    padding: 20px;
+    position: absolute;
+
+
 }
+
 /* about */
 /* ----------------------------------------------------------------------------------------------- */
 /* cards */
-img{
+
+img {
     border-bottom: 4rem;
 }
 
 /* contact */
 /* ----------------------------------------------------------------------------------------------- */
 /* cards */
-#contact{
 
-}
-#contact input{
 
-}
-#send{
-    
-}
+
+
+#send {}
+
 /* foote */
 /* ----------------------------------------------------------------------------------------------- */
 /*  */
-footer{
-
-}
+footer {}
 
 /* BREAKPOINTS */
 @media screen and (min-width:576px) {
     #header-img {
         height: 30vh;
+    }
+
+    #display,
+    #cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #display div,
+    #cards div {
+        width: 49%;
+    }
 }
-#display, #cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-#display div, #cards div{
-    width: 49%;
-}
-}
+
 @media screen and (min-width:1024px) {
-    #display div, #cards div{
-    width: 24%;
-}
+
+    #display div,
+    #cards div {
+        width: 24%;
+    }
 }
